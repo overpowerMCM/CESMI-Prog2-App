@@ -46,12 +46,12 @@ namespace CRUD.PresentacionWinForms.Controladores
 
         private void BotonPago_Click(object sender, EventArgs e)
         {
-            AnidarVistaAPanelTrabajo( new ControladorEmpleado() );
+            AnidarVistaAPanelTrabajo( new ControladorPago() );
         }
 
         private void BotonEmpleados_Click(object sender, EventArgs e)
         {
-            AnidarVistaAPanelTrabajo(new ControladorPago());
+            AnidarVistaAPanelTrabajo(new ControladorEmpleado());
         }
     }
 }

@@ -13,6 +13,8 @@ namespace CRUD.Dominio.Enumeradores
         LIMPIEZA,
         SEGURIDAD,
         TECNICO,
-        TERCERIZADO
+        TERCERIZADO,
+        CEO,
+        MAX
     }
 }

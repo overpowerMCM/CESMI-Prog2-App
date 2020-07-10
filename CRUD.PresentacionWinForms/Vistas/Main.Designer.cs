@@ -31,9 +31,9 @@ namespace CRUD.PresentacionWinForms.Vistas
         private void InitializeComponent()
         {
             this._panelMenu = new System.Windows.Forms.Panel();
-            this._panelTrabajo = new System.Windows.Forms.Panel();
-            this._btnEmpleados = new System.Windows.Forms.Button();
             this._btnPagos = new System.Windows.Forms.Button();
+            this._btnEmpleados = new System.Windows.Forms.Button();
+            this._panelTrabajo = new System.Windows.Forms.Panel();
             this._panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,13 +49,14 @@ namespace CRUD.PresentacionWinForms.Vistas
             this._panelMenu.Size = new System.Drawing.Size(120, 573);
             this._panelMenu.TabIndex = 0;
             // 
-            // _panelTrabajo
+            // _btnPagos
             // 
-            this._panelTrabajo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._panelTrabajo.Location = new System.Drawing.Point(120, 0);
-            this._panelTrabajo.Name = "_panelTrabajo";
-            this._panelTrabajo.Size = new System.Drawing.Size(830, 573);
-            this._panelTrabajo.TabIndex = 1;
+            this._btnPagos.Location = new System.Drawing.Point(12, 103);
+            this._btnPagos.Name = "_btnPagos";
+            this._btnPagos.Size = new System.Drawing.Size(102, 23);
+            this._btnPagos.TabIndex = 1;
+            this._btnPagos.Text = "Pagos";
+            this._btnPagos.UseVisualStyleBackColor = true;
             // 
             // _btnEmpleados
             // 
@@ -66,20 +67,19 @@ namespace CRUD.PresentacionWinForms.Vistas
             this._btnEmpleados.Text = "Empleados";
             this._btnEmpleados.UseVisualStyleBackColor = true;
             // 
-            // _btnPagos
+            // _panelTrabajo
             // 
-            this._btnPagos.Location = new System.Drawing.Point(12, 103);
-            this._btnPagos.Name = "_btnPagos";
-            this._btnPagos.Size = new System.Drawing.Size(102, 23);
-            this._btnPagos.TabIndex = 1;
-            this._btnPagos.Text = "Pagos";
-            this._btnPagos.UseVisualStyleBackColor = true;
+            this._panelTrabajo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._panelTrabajo.Location = new System.Drawing.Point(120, 0);
+            this._panelTrabajo.Name = "_panelTrabajo";
+            this._panelTrabajo.Size = new System.Drawing.Size(1048, 573);
+            this._panelTrabajo.TabIndex = 1;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 573);
+            this.ClientSize = new System.Drawing.Size(1168, 573);
             this.Controls.Add(this._panelTrabajo);
             this.Controls.Add(this._panelMenu);
             this.Name = "Main";

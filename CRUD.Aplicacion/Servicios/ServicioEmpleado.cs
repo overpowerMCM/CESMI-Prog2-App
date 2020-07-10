@@ -63,5 +63,28 @@ namespace CRUD.Aplicacion.Servicios
             }
         }
 
+        public void ActualizarEmpleado(EmpleadoDTO empleado)
+        {
+            if (DateTime.Now.Subtract(empleado.FechaNacimiento).TotalDays < (65 * 365))
+            {
+                Empleado entidad = new Empleado();
+
+                entidad.Id = empleado.Id;
+                entidad.Nombre = empleado.Nombre;
+                entidad.Apellido = empleado.Apellido; // Automapper
+                entidad.DNI = empleado.DNI;
+                entidad.FechaIngreso = empleado.FechaIngreso;
+                entidad.FechaNacimiento = empleado.FechaNacimiento;
+                entidad.Legajo = empleado.Legajo;
+                entidad.Puesto = (int)empleado.Puesto;
+
+                _repositorio.Actualizacion(entidad);
+            }
+        }
+
+        public void BorrarEmpleadoPorId( int id )
+        {
+            _repositorio.Borrar( new Empleado() { Id = id } );
+        }
     }
 }

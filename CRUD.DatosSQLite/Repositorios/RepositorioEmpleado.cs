@@ -21,17 +21,26 @@ namespace CRUD.DatosSQLite.Repositorios
 
         public void Actualizacion(Empleado entidad)
         {
-            //Config.DDBBPath
+            using (var conn = new SQLiteConnection(Config.ConnectionString))
+            {
+                conn.Execute("UPDATE Empleado SET Nombre=@Nombre,Apellido=@Apellido,FechaNacimiento=@FechaNacimiento,FechaIngreso=@FechaIngreso,Legajo=@Legajo,Puesto=@Puesto,DNI=@DNI WHERE Id=@Id", entidad);
+            }
         }
 
         public void Borrar(Empleado entidad)
         {
-            throw new NotImplementedException();
+            using (var conn = new SQLiteConnection(Config.ConnectionString))
+            {
+                conn.Execute("DELETE FROM Empleado WHERE Id=@Id", entidad);
+            }
         }
 
         public void Insertar(Empleado entidad)
         {
-            throw new NotImplementedException();
+            using (var conn = new SQLiteConnection(Config.ConnectionString))
+            {
+                conn.Execute("INSERT INTO Empleado (Nombre,Apellido,FechaNacimiento,FechaIngreso,Legajo,Puesto,DNI) VALUES (@Nombre,@Apellido,@FechaNacimiento,@FechaIngreso,@Legajo,@Puesto,@DNI)", entidad);
+            }
         }
 
     }
